@@ -41,3 +41,13 @@ Stage 3:
         select id, type, message, createdAt from notifications where studentId = 1042 and isRead = false order by createdAt desc limit 10;
     Solution: so this query does not access all the data only the required one are asked.
 
+Stage 4:
+    Problem: if the no. of user increased and no. api calls increase we need to handly slow api response, latency and bottleneck etc.,
+    Solution: pagination, use limit and page load only some data first, then show next pages, this reduces the data transfer.
+              caching, store frequently accessing user details in server for faster fetching, reduces latency.
+              load balancing, divide the number of request to multiple server
+              horizontal scaling, scale databse by adding more nodes
+              use websockets
+
+
+
