@@ -49,5 +49,8 @@ Stage 4:
               horizontal scaling, scale databse by adding more nodes
               use websockets
 
+Stage 5:
+    Problem: synchornous processing is done which is very slow, becuase it blocks server when it is sending the notifications
+    Solution: use batch processing, instead of sending one by one instead send the notifications in batches like 100 notification. at a time.
 
 
